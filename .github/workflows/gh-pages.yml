@@ -40,6 +40,7 @@ jobs:
     - name: Update content
       run: |
         rm -rf * && cp -r /tmp/wwwroot/* .
+        git add *
 
     - name: Commit files
       run: |
