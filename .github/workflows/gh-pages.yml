@@ -21,18 +21,23 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      with:
+        ref: 'master'
 
     # Runs a single command using the runners shell
     - name: Temporary copy of wwwroot
-      run: rm -rf /tmp/wwwroot && cp -r Game/wwwroot /tmp
+      run: cp -r Game/wwwroot /tmp
 
-    - name: Checkout gh-pages
-      run: git checkout gh-pages
+    - name: Checkout develop
+      uses: actions/checkout@v2
+      with:
+        ref: 'gh-pages'
+        clean: false
       
     # Runs a set of commands using the runners shell
     - name: Pushing to gh-pages
       run: |
-        rm -rf *  && cp -r /tmp/wwwroot/* .
+        rm -rf * && cp -r /tmp/wwwroot/* .
         git add *
         git commit -m "gh-pages"
         git push
