@@ -1,4 +1,4 @@
-git checkout -b gh-pages
-rm -v !("Game") && mv Game/wwwroot/* . && rm -rf Game 
+cp -r Game/wwwroot /tmp && rm -rf * && cp -r /tmp/wwwroot/* .
+git checkout gh-pages
 git commit -m "gh-pages"
 git push
