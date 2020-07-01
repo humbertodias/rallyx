@@ -4,6 +4,8 @@ This is a homebrew recreation of classic eighties coin op Rally-X.
 
 It is implemented in HTML5 and JavaScript, empowered by powerful library phaser.io!
 
+[Play the game](https://humbertodias.github.io/rallyx/)
+
 ### Req
 
 * DotNet 3.1
