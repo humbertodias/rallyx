@@ -11,7 +11,7 @@ It is implemented in HTML5 and JavaScript, empowered by powerful library phaser.
 ### Run
 
 ```
-cd Game && dotnet run
+dotnet run
 ```
 
 Then, access
@@ -23,13 +23,12 @@ http://localhost:5000
 
 Arrows to move and CTRL for smoke
 
-
 ### TODO List
 
 * [x] Use latest dotnet version
 * [x] Cross Platform
 * [ ] Sound effect
-* [ ]
+* [ ] etc
 
 
 ## Ref
