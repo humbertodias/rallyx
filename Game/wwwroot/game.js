@@ -41,6 +41,8 @@ requirejs([
 
     var Init = function (game) {
 
+        
+
         this.init = function (args) {
             highScore = getCookie("highScore") || 0;
             highScoreRound = getCookie("highScoreRound") || 0;
@@ -51,14 +53,17 @@ requirejs([
             game.scale.pageAlignVertically = true;
             // game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 
-            //game.load.audio('default', ['captured.wav']);
+//            game.load.audio('default', ['captured.wav']);
+            game.load.audio('default', ['assets/20 Rally X In Game Music.mp3']);
+
+            
         };
 
         this.create = function () {
 
-            // var backgroundMusic = game.add.audio('default');
-            // backgroundMusic.loop = true;
-            // backgroundMusic.play();
+            var backgroundMusic = game.add.audio('default');
+            backgroundMusic.loop = true;
+            backgroundMusic.play();
 
             // starting ARCADE physics
             game.physics.startSystem(Phaser.Physics.ARCADE);
